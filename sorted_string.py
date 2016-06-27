@@ -25,7 +25,7 @@ def sorted_string(s, start_list_chars, end_list_chars):
     try:
         l = eval(s)
     except:
-        raise SyntaxError("List could not be parsed")
+        raise ValueError("List could not be parsed")
     if not hasattr(l, '__iter__'):
         raise SyntaxError("Not iterable")
 

@@ -48,7 +48,7 @@ class TestSortedString(unittest.TestCase):
             self.assertEqual("List delimeters don't match", str(cm.exception))
 
     def test_not_parsable(self):
-        with self.assertRaises(SyntaxError) as cm:
+        with self.assertRaises(ValueError) as cm:
             self.sorted_string("'dog', 'cat', 'mouse")
             self.assertEqual("List could not be parsed", str(cm.exception))
 
