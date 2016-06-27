@@ -1,4 +1,4 @@
-# sort-list
+# SortList
 A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting items in a list.
 
 - [Demo](#demo)
@@ -10,13 +10,13 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 
 
 ## Demo
-![](https://github.com/kylebebak/sort-list/blob/master/demo/sort.gif)
+![](https://github.com/kylebebak/sublime_sort_list/blob/master/demo/sort.gif)
 
 
 ## Installation
 
 #### From Package Control
-`sort-list` is available via [Sublime Package Control](https://sublime.wbond.net/packages/sort-list). This is the recommended way to install the plugin.
+`SortList` is available via [Sublime Package Control](https://sublime.wbond.net/packages/SortList). This is the recommended way to install the plugin.
 
 #### From GitHub
 Alternatively, you may install via GitHub by cloning this repository into the `Packages`
@@ -24,7 +24,7 @@ directory under Sublime Text's data directory. For example, on OSX:
 
 ```
 cd "~/Library/Application Support/Sublime Text 3/Packages"
-git clone https://github.com/kylebebak/sort-list.git
+git clone https://github.com/kylebebak/sublime_sort_list.git
 ```
 
 
