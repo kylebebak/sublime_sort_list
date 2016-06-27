@@ -1,56 +1,53 @@
 # sort-list
-A [Sublime Text](http://www.sublimetext.com/) plugin that **automatically saves the current file after every modification**.
+A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting items in a list.
 
-- [Synopsis](#synopsis)
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#usage)
+- [Contributing](#contributing)
 - [License](#license)
-- [Author](#author)
 
-Synopsis
--------
-In the occasion where you'd want Sublime Text to save the current file after
-each change, you can use this plugin.
 
-Demo
--------
-![Image](https://github.com/jamesfzhang/auto-save/blob/master/demo.gif?raw=true)
+## Demo
+![](https://raw.githubusercontent.com/kylebebak/questionnaire/master/examples/sort.gif)
 
-Installation
--------
-#### From Package Control
-auto-save is available through [Sublime Package Control](https://sublime.wbond.net/packages/auto-save)
-and is the recommended way to install.
 
-#### From Github
+## Installation
+
+### From Package Control
+`sort-list` is available via [Sublime Package Control](https://sublime.wbond.net/packages/sort-list). This is the recommended way to install the plugin.
+
+### From Github
 Alternatively, you may install via GitHub by cloning this repository into the `Packages`
-directory under Sublime Text's data directory:
-
-On Mac:
+directory under Sublime Text's data directory. For example, on OSX:
 
 ```
-cd ~/Library/Application Support/Sublime Text 3/Packages
-git clone https://github.com/jamesfzhang/auto-save.git
+cd "~/Library/Application Support/Sublime Text 3/Packages"
+git clone https://github.com/kylebebak/sort-list.git
 ```
+
 
 ## Usage
--------
-**By default, auto-save is disabled** because it is a fairly invasive plugin. To make it less invasive, you can instruct it to only auto-save changes to the file that is active when you turn on auto-save. In this mode, it will ignore changes to all other files.
+Highlight one or more lists and run the command. If the lists can't be sorted exceptions with line numbers will be displayed in the __quick panel__.
 
-You can also instruct it to auto-backup the file instead of auto-saving it. The backup gets created in the same directory as its source file. The backup file takes the same name as its source file, with the string `.autosave` inserted directly before the file extension. When auto-save is disabled, the backup file is deleted.
-
-There are two ways to enable it. You can press <kbd>Command + Shift + P</kbd> to bring up the Command Palette, and search for **AutoSave**. Here, there are 3 options:
-
-- Toggle AutoSave: all files
-- Toggle AutoSave: current file only
-- Toggle AutoSave Backup: current file only
-
-Alternatively, you can bind commands to turn the plugin on or off. For example, to toggle auto-save for all files, open "Preferences / Key Bindings - User" and add:
+The name of the command is `sort_list`. It appears in the `Command Palette` as `SortList`. If you want to use it with a minimum of hassle add a shortcut to your `.sublime-keymap`.
 
 ```json
-{ "keys": ["shift+alt+super+o"], "command": "sort-list" }
+{ "keys": ["shift+alt+super+o"], "command": "sort_list" }
 ```
+
+
+## Tests
+From the root directory, run `python3 -m unittest discover --verbose`. Some of the tests will fail in Python 2, but the plugin still works fine in Sublime Text 2.
+
+
+## Contributing
+Fork it and create a pull request.
+
+### Wish List
+- reinsert leading and trailing whitespace, including new lines, after sorting the list
+- allow for list delimeters with more than one character, e.g. `<%` and `%>`.
 
 
 ## License
