@@ -18,7 +18,7 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 #### From Package Control
 `sort-list` is available via [Sublime Package Control](https://sublime.wbond.net/packages/sort-list). This is the recommended way to install the plugin.
 
-#### From Github
+#### From GitHub
 Alternatively, you may install via GitHub by cloning this repository into the `Packages`
 directory under Sublime Text's data directory. For example, on OSX:
 
