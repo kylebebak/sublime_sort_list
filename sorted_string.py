@@ -15,11 +15,12 @@ def sorted_string(s, start_list_chars, end_list_chars):
     if start_list_chars.find(first) != end_list_chars.find(last):
         raise SyntaxError("List delimeters don't match")
 
-    trailing_comma = ',' if ',' in s[-2:] else ''
     if first in start_list_chars: # remove list delimeters from string
         s = s[1:-1]
     else: # string not bounded by list delimeters
         first, last = '', ''
+    s = s.strip()
+    trailing_comma = ',' if ',' is s[-1] else ''
 
     try:
         l = eval(s)

@@ -1,4 +1,4 @@
 {
-  "start_list_chars": "[{(<'\"",
-  "end_list_chars": "]})>'\""
+  "start_list_chars": "[{(<",
+  "end_list_chars": "]})>"
 }

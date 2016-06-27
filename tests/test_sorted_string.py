@@ -17,23 +17,27 @@ class TestSortedString(unittest.TestCase):
 
     def test_list(self):
         self.assertEqual(self.sorted_string("['dog', 'cat', 'mouse']"),
-                         "['cat', 'dog', 'mouse']")
+                                            "['cat', 'dog', 'mouse']")
 
     def test_tuple(self):
         self.assertEqual(self.sorted_string("('dog', 'cat', 'mouse')"),
-                         "('cat', 'dog', 'mouse')")
+                                            "('cat', 'dog', 'mouse')")
 
     def test_trailing_comma(self):
         self.assertEqual(self.sorted_string("['dog', 'cat', 'mouse',]"),
-                         "['cat', 'dog', 'mouse',]")
+                                            "['cat', 'dog', 'mouse',]")
 
     def test_no_delimeters(self):
         self.assertEqual(self.sorted_string("'dog', 'cat', 'mouse'"),
-                         "'cat', 'dog', 'mouse'")
+                                            "'cat', 'dog', 'mouse'")
 
     def test_whitespace(self):
         self.assertEqual(self.sorted_string("\n'dog',\n\n 'cat', 'mouse' \n"),
-                         "'cat', 'dog', 'mouse'")
+                                            "'cat', 'dog', 'mouse'")
+
+    def test_whitespace_trailing_comma(self):
+        self.assertEqual(self.sorted_string("('dog', 'cat', 'mouse'  , ) "),
+                                            "('cat', 'dog', 'mouse',)")
 
     def test_non_matching_delimeters(self):
         with self.assertRaises(SyntaxError) as cm:
@@ -45,7 +49,7 @@ class TestSortedString(unittest.TestCase):
 
     def test_not_parsable(self):
         with self.assertRaises(SyntaxError) as cm:
-            self.sorted_string("'dog', 'cat', 'mous")
+            self.sorted_string("'dog', 'cat', 'mouse")
             self.assertEqual("List could not be parsed", str(cm.exception))
 
     def test_not_iterable(self):
@@ -55,7 +59,7 @@ class TestSortedString(unittest.TestCase):
 
     def test_unorderable(self):
         with self.assertRaises(TypeError) as cm:
-            self.sorted_string("['dog', 2, 1]")
+            self.sorted_string("['dog', 'cat', 1]")
             self.assertEqual("The list contains unorderable types", str(cm.exception))
 
 

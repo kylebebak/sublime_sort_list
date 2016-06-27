@@ -15,8 +15,8 @@ settings_filename = "sort_list.sublime-settings"
 
 
 class SortListCommand(sublime_plugin.TextCommand):
-    START_LIST_CHARS = "[{(<'\""
-    END_LIST_CHARS = "]})>'\""
+    START_LIST_CHARS = "[{(<"
+    END_LIST_CHARS = "]})>"
 
     def run(self, edit):
         settings = sublime.load_settings(settings_filename)

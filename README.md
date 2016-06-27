@@ -10,7 +10,7 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 
 
 ## Demo
-![](https://raw.githubusercontent.com/kylebebak/questionnaire/master/examples/sort.gif)
+![](https://raw.githubusercontent.com/kylebebak/questionnaire/master/demo/sort.gif)
 
 
 ## Installation
@@ -31,11 +31,13 @@ git clone https://github.com/kylebebak/sort-list.git
 ## Usage
 Highlight one or more lists and run the command. If the lists can't be sorted exceptions with line numbers will be displayed in the __quick panel__.
 
-The name of the command is `sort_list`. It appears in the `Command Palette` as `SortList`. If you want to use it with a minimum of hassle add a shortcut to your `.sublime-keymap`.
+The name of the command is `sort_list`. It appears in the `Command Palette` as `Sort List`. If you want to use it with a minimum of hassle add a shortcut to your `.sublime-keymap`.
 
 ```json
 { "keys": ["shift+alt+super+o"], "command": "sort_list" }
 ```
+
+If you want to change the list delimiter characters, override [sort_list.sublime-settings](./sort_list.sublime-settings).
 
 
 ## Tests
@@ -47,7 +49,7 @@ Fork it and create a pull request.
 
 ### Wish List
 - reinsert leading and trailing whitespace, including new lines, after sorting the list
-- allow for list delimeters with more than one character, e.g. `<%` and `%>`.
+- allow for list delimiters with more than one character, e.g. `<%` and `%>`.
 
 
 ## License
