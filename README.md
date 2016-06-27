@@ -4,7 +4,7 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#usage)
+- [Tests](#tests)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -15,10 +15,10 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 
 ## Installation
 
-### From Package Control
+#### From Package Control
 `sort-list` is available via [Sublime Package Control](https://sublime.wbond.net/packages/sort-list). This is the recommended way to install the plugin.
 
-### From Github
+#### From Github
 Alternatively, you may install via GitHub by cloning this repository into the `Packages`
 directory under Sublime Text's data directory. For example, on OSX:
 
@@ -47,7 +47,7 @@ From the root directory, run `python3 -m unittest discover --verbose`. Some of t
 ## Contributing
 Fork it and create a pull request.
 
-### Wish List
+#### Wish List
 - reinsert leading and trailing whitespace, including new lines, after sorting the list
 - allow for list delimiters with more than one character, e.g. `<%` and `%>`.
 
