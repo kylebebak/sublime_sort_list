@@ -10,7 +10,7 @@ A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting 
 
 
 ## Demo
-![](https://raw.githubusercontent.com/kylebebak/questionnaire/master/demo/sort.gif)
+![](https://github.com/kylebebak/sort-list/blob/master/demo/sort.gif)
 
 
 ## Installation
