@@ -1,5 +1,5 @@
 # SortList
-A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting items in a list.
+A cross-language [Sublime Text](http://www.sublimetext.com/) plugin for sorting items in a list. Handles lists without opening and closing list delimiters, and lists with trailing commas. Preserves lists' quote style (single vs. double).
 
 - [Demo](#demo)
 - [Installation](#installation)

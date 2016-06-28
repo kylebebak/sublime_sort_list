@@ -27,7 +27,7 @@ class TestSortedString(unittest.TestCase):
         self.assertEqual(self.sorted_string("['dog', 'cat', 'mouse',]"),
                                             "['cat', 'dog', 'mouse',]")
 
-    def test_no_delimeters(self):
+    def test_no_delimiters(self):
         self.assertEqual(self.sorted_string("'dog', 'cat', 'mouse'"),
                                             "'cat', 'dog', 'mouse'")
 
@@ -39,23 +39,26 @@ class TestSortedString(unittest.TestCase):
         self.assertEqual(self.sorted_string("('dog', 'cat', 'mouse'  , ) "),
                                             "('cat', 'dog', 'mouse',)")
 
-    def test_non_matching_delimeters(self):
+    def test_double_quotes(self):
+        self.assertEqual(self.sorted_string('("dog", "cat", "mouse")'),
+                                            '("cat", "dog", "mouse")')
+
+    def test_mixed_quotes(self):
+        self.assertEqual(self.sorted_string("('dog', \"cat\", 'mouse')"),
+                                            "('cat', 'dog', 'mouse')")
+
+    def test_non_matching_delimiters(self):
         with self.assertRaises(SyntaxError) as cm:
             self.sorted_string("['dog', 'cat', 'mouse'")
-            self.assertEqual("List delimeters don't match", str(cm.exception))
+            self.assertEqual("List delimiters don't match", str(cm.exception))
         with self.assertRaises(SyntaxError) as cm:
             self.sorted_string("['dog', 'cat', 'mouse')")
-            self.assertEqual("List delimeters don't match", str(cm.exception))
+            self.assertEqual("List delimiters don't match", str(cm.exception))
 
     def test_not_parsable(self):
         with self.assertRaises(ValueError) as cm:
             self.sorted_string("'dog', 'cat', 'mouse")
             self.assertEqual("List could not be parsed", str(cm.exception))
-
-    def test_not_iterable(self):
-        with self.assertRaises(SyntaxError) as cm:
-            self.sorted_string("1")
-            self.assertEqual("Not iterable", str(cm.exception))
 
     def test_unorderable(self):
         with self.assertRaises(TypeError) as cm:
