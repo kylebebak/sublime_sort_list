@@ -11,7 +11,7 @@ import sublime, sublime_plugin
 
 from .sorted_string import sorted_string
 
-settings_filename = "sort_list.sublime-settings"
+settings_filename = "SortList.sublime-settings"
 
 
 class SortListCommand(sublime_plugin.TextCommand):

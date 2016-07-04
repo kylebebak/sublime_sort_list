@@ -37,7 +37,7 @@ The name of the command is `sort_list`. It appears in the `Command Palette` as `
 { "keys": ["shift+alt+super+o"], "command": "sort_list" }
 ```
 
-If you want to change the list delimiter characters, override [sort_list.sublime-settings](./sort_list.sublime-settings).
+If you want to change the list delimiter characters, override [SortList.sublime-settings](./SortList.sublime-settings).
 
 
 ## Tests

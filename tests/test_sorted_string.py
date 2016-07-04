@@ -5,7 +5,7 @@ from sorted_string import sorted_string
 
 
 class TestSortedString(unittest.TestCase):
-    SETTINGS_FILE_NAME = 'sort_list.sublime-settings'
+    SETTINGS_FILE_NAME = 'SortList.sublime-settings'
 
     @classmethod
     def setUpClass(cls):
